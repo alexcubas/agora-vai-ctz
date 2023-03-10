@@ -1,17 +1,9 @@
 {
+    "version": 2,
+    "builds": [{ "src": "src/index.js", "use": "@vercel/node" }],
+    "routes": [{ "src": "/(.*)", "dest": "src/index.js" }],
     "env": {
-        "DATABASE_URL": "mongodb+srv://alexcubas10:alexcubas@custerbackendtest.w6x5obu.mongodb.net/test?retryWrites=true&w=majority"
-    },
-    "builds": [
-        {
-            "src": "src/index.js",
-            "use": "@vercel/node"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/.*",
-            "dest": "src/index.js"
-        }
-    ]
+        "MONGODB_URI": "mongodb+srv://alexcubas10:alexcubas@custerbackendtest.w6x5obu.mongodb.net/test?retryWrites=true&w=majority",
+        "PORT": "3000"
+    }
 }
